@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'assets/css/setting.css' %}">
+</head>
+
+<section id="settings">
+    <div class="settings-container">
+        <h2>⚙️ Settings</h2>
+        <form id="url-form" method="post" action="{% url 'add_url' %}">
+            {% csrf_token %}
+            <input id="video-url" name="url" value="{{ url }}" placeholder="Enter IP camera URL">
+            <button type="submit">Update URL</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

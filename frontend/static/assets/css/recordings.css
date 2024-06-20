@@ -1,0 +1,12 @@
+.recordings-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.recordings-container .recording-tile {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #f0f0f0; /* Placeholder color */
+    padding: 20px;
+}

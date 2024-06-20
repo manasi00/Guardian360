@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <head>
+        <link rel="stylesheet" href="{% static 'assets/css/index.css' %}">
+    </head>
+    <section id="live-video" style="margin-top: 50px;">
+        <div class="video-container">
+            <h2>{{ video_path }}</h2>
+            <video width="640" height="480" preload controls autoplay muted>
+                <source src="{{ request.scheme }}://{{ request.get_host }}/media/video/{{ video_path }}" type="video/mp4">
+                <source src="{{ request.scheme }}://{{ request.get_host }}/media/video/{{ video_path }}" type="video/x-m4v">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+{% endblock %}

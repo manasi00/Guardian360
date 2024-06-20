@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section id="live-video">
+        <div class="video-container">
+            <video width="640" height="480" preload controls autoplay muted>
+                <source src="{{ request.scheme }}://{{ request.get_host }}/media/{{ video_path }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+{% endblock %}

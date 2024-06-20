@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<section id="live-video">
+    <h2>🔴 Live</h2>
+    <div class="video-container">
+        {% if mode == 'sql' %}
+            <iframe src={{video}} width='640' height='480' frameborder='0' allowfullscreen>Your browser does not support iframe </iframe>
+        {% elif mode == 'default' %}
+            <video width="640" height="480" muted autoplay> <source src="http://127.0.0.1:8000/media/manasi.mp4"> Your browser does not support the video tag.</video>
+        {% endif %}
+        <div class="input-section">
+            <form id="url-form" method="post" action="{% url 'add_url' %}">
+                {% csrf_token %}
+                <input id="video-url" name="url" value="{{ video }}" placeholder="Enter IP camera URL">
+                <button type="submit">Update URL</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

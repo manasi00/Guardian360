@@ -1,0 +1,103 @@
+/* styles.css */
+
+/* Reset styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar-left {
+    flex-grow: 1;
+}
+
+.site-name {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-right ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-right ul li {
+    display: inline;
+}
+
+.navbar-right ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-right ul li a:hover {
+    background-color: #555;
+}
+
+section {
+    padding: 20px;
+}
+
+/* Index page specific styles */
+#live-video {
+    margin-top: 20px;
+}
+
+.video-container {
+    width: 640px;
+    height: 640px;
+    background-color: #f0f0f0; /* Placeholder color */
+    margin: auto;
+}
+
+/* Recordings page specific styles */
+.recordings-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recordings-container .recording-tile {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #f0f0f0; /* Placeholder color */
+    padding: 20px;
+}
+
+/* Registration and Login page specific styles */
+form {
+    margin-top: 20px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

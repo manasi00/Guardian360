@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <section id="recordings">
+        <h2>🎦 Recordings</h2>
+        <div class="recordings-container">
+            <table class="events-table">
+                <thead>
+                    <tr>
+                        <th>Url</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for url in rec_arr %}
+                        <tr>
+                            <td>{{ url }}</td>
+                            <td>
+                                <a href="http://127.0.0.1:8000/view_video/{{ url }}" class="">Watch</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% endblock %}
