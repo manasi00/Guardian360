@@ -1,4 +1,3 @@
-ultralytics
 deepface
 opencv-python
 numpy
