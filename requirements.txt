@@ -3,4 +3,5 @@ deepface
 opencv-python
 numpy
 django
-email
+scrfd
+pillow
